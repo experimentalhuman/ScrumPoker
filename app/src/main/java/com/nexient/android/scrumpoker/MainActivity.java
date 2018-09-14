@@ -3,6 +3,9 @@ package com.nexient.android.scrumpoker;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -35,6 +38,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // COMPLETED init Deck class/object
         deck = new Deck(multiCardLayout, singleCardHiddenButton, singleCardShownButton, this);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main, menu);
+        return true;
     }
 
     @Override
@@ -72,5 +82,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
         deck.chooseCard(cardLabel);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        if(item.getItemId() == R.id.action_settings){
+
+            // TODO launch settings activity
+
+        }
+
+        return true;
     }
 }
