@@ -1,5 +1,32 @@
 <resources>
     <string name="app_name">Scrum Poker</string>
+
+    <!--Default values for multi-card layout-->
     <string name="card_height_default">120dp</string>
     <string name="card_width_default">90dp</string>
+    <string name="card_margin_top_bottom">8dp</string>
+    <string name="card_margin_left_right">8dp</string>
+    <string name="card_padding_top_bottom">8dp</string>
+    <string name="card_padding_left_right">8dp</string>
+    <string name="card_label_size_default">30dp</string>
+
+    <!--Default labels (face values) for multi-card layout-->
+    <string name="card_label_top_left">0</string>
+    <string name="card_label_top_center">1</string>
+    <string name="card_label_top_right">3</string>
+    <string name="card_label_center_left">5</string>
+    <string name="card_label_center_center">7</string>
+    <string name="card_label_center_right">13</string>
+    <string name="card_label_bottom_left">21</string>
+    <string name="card_label_bottom_center">100</string>
+    <string name="card_label_bottom_right">WTF</string>
+
+    <!--Default values for single-card views-->
+    <string name="card_height_single">360dp</string>
+    <string name="card_width_single">270dp</string>
+    <string name="card_label_size_single">192dp</string>
+
+    <!--Default labels for single-card views-->
+    <string name="card_label_single_shown">0</string>
+    <string name="card_label_single_hidden">X</string>
 </resources>
