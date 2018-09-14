@@ -7,6 +7,6 @@
         android:fromXScale="1.0"
         android:toXScale="0.0"
         android:fromYScale="1.0"
-        android:toYScale="1.5"
+        android:toYScale="1.25"
         />
 </set>

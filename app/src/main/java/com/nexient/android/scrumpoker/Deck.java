@@ -21,6 +21,8 @@ public class Deck {
     //animations for transitions
     private final Animation animOut;
     private final Animation animIn;
+    private final Animation slideIn;
+    private final Animation slideOut;
 
     public Deck(View multi_card, View card_hide, TextView card_show, Context context){
         cards = multi_card;
@@ -28,6 +30,8 @@ public class Deck {
         frontOfCard = card_show;
         animIn = AnimationUtils.loadAnimation(context, R.anim.flip_in);
         animOut = AnimationUtils.loadAnimation(context, R.anim.flip_out);
+        slideIn = AnimationUtils.loadAnimation(context, R.anim.slide_in);
+        slideOut = AnimationUtils.loadAnimation(context, R.anim.slide_out);
     }
 
 
@@ -39,12 +43,12 @@ public class Deck {
         frontOfCard.setText(value);
 
         //the back of the card pops up and others are made invisible
-        cards.startAnimation(animOut);
+        cards.startAnimation(slideOut);
         cards.postDelayed(new Runnable(){
             public void run(){
                 cards.setVisibility(View.INVISIBLE);
                 backOfCard.setVisibility(View.VISIBLE);
-                backOfCard.startAnimation(animIn);
+                backOfCard.startAnimation(slideIn);
             }
         }, 500);
         frontOfCard.setVisibility(View.INVISIBLE);
@@ -71,12 +75,12 @@ public class Deck {
         //switch so only the table view is visible
         backOfCard.setVisibility(View.INVISIBLE);
 
-        frontOfCard.startAnimation(animOut);
+        frontOfCard.startAnimation(slideOut);
         frontOfCard.postDelayed(new Runnable(){
             public void run(){
                 frontOfCard.setVisibility(View.INVISIBLE);
                 cards.setVisibility(View.VISIBLE);
-                cards.startAnimation(animIn);
+                cards.startAnimation(slideIn);
             }
         }, 500);
     }
