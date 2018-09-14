@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // COMPLETED retrieve UI objects by resource ID
         multiCardLayout = (ConstraintLayout) findViewById(R.id.multi_card_layout);
-        cardButtonArray = new Button[2][2];
+        cardButtonArray = new Button[3][3];
         cardButtonArray[0][0] = (Button) findViewById(R.id.card_button_top_left);
         cardButtonArray[0][1] = (Button) findViewById(R.id.card_button_top_center);
         cardButtonArray[0][2] = (Button) findViewById(R.id.card_button_top_right);
