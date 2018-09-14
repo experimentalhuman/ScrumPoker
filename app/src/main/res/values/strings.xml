@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Scrum Poker</string>
+    <string name="card_height_default">120dp</string>
+    <string name="card_width_default">90dp</string>
 </resources>
