@@ -67,37 +67,50 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Log.d("Scrum Poker", "clicked");
         int viewID = clickedView.getId();
 
+        //added returns so it doesn't go on to the switch
+
         if(viewID == R.id.single_card_view_show){
             deck.discard();
-        } else if(viewID == R.id.single_card_view_hide){
+        } else if(viewID == R.id.single_card_view_hide) {
             deck.reveal();
-        }
+        } else {
 
-        String cardLabel = "0";
-        switch (viewID) {
-            case R.id.card_button_top_left: cardLabel = getString(R.string.card_label_top_left);
-                break;
-            case R.id.card_button_top_center: cardLabel = getString(R.string.card_label_top_center);
-                break;
-            case R.id.card_button_top_right: cardLabel = getString(R.string.card_label_top_right);
-                break;
-            case R.id.card_button_center_left: cardLabel = getString(R.string.card_label_center_left);
-                break;
-            case R.id.card_button_center_center: cardLabel = getString(R.string.card_label_center_center);
-                break;
-            case R.id.card_button_center_right: cardLabel = getString(R.string.card_label_center_right);
-                break;
-            case R.id.card_button_bottom_left: cardLabel = getString(R.string.card_label_bottom_left);
-                break;
-            case R.id.card_button_bottom_center: cardLabel = getString(R.string.card_label_bottom_center);
-                break;
-            case R.id.card_button_bottom_right: cardLabel = getString(R.string.card_label_bottom_right);
-                break;
-            default: cardLabel = "0";
-                break;
-        }
+            String cardLabel = "0";
+            switch (viewID) {
+                case R.id.card_button_top_left:
+                    cardLabel = getString(R.string.card_label_top_left);
+                    break;
+                case R.id.card_button_top_center:
+                    cardLabel = getString(R.string.card_label_top_center);
+                    break;
+                case R.id.card_button_top_right:
+                    cardLabel = getString(R.string.card_label_top_right);
+                    break;
+                case R.id.card_button_center_left:
+                    cardLabel = getString(R.string.card_label_center_left);
+                    break;
+                case R.id.card_button_center_center:
+                    cardLabel = getString(R.string.card_label_center_center);
+                    break;
+                case R.id.card_button_center_right:
+                    cardLabel = getString(R.string.card_label_center_right);
+                    break;
+                case R.id.card_button_bottom_left:
+                    cardLabel = getString(R.string.card_label_bottom_left);
+                    break;
+                case R.id.card_button_bottom_center:
+                    cardLabel = getString(R.string.card_label_bottom_center);
+                    break;
+                case R.id.card_button_bottom_right:
+                    cardLabel = getString(R.string.card_label_bottom_right);
+                    break;
+                default:
+                    cardLabel = "0";
+                    break;
+            }
 
-        deck.chooseCard(cardLabel);
+            deck.chooseCard(cardLabel);
+        }
     }
 
     @Override
