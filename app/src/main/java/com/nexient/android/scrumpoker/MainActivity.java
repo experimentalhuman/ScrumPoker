@@ -3,11 +3,14 @@ package com.nexient.android.scrumpoker;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+
+import java.util.Set;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private ConstraintLayout multiCardLayout;
@@ -38,6 +41,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         // COMPLETED init Deck class/object
         deck = new Deck(multiCardLayout, singleCardHiddenButton, singleCardShownButton, this);
+
+        cardButtonArray[0][0].setOnClickListener(this);
+        cardButtonArray[0][1].setOnClickListener(this);
+        cardButtonArray[0][2].setOnClickListener(this);
+        cardButtonArray[1][0].setOnClickListener(this);
+        cardButtonArray[1][1].setOnClickListener(this);
+        cardButtonArray[1][2].setOnClickListener(this);
+        cardButtonArray[2][0].setOnClickListener(this);
+        cardButtonArray[2][1].setOnClickListener(this);
+        cardButtonArray[2][2].setOnClickListener(this);
+        singleCardShownButton.setOnClickListener(this);
+        singleCardHiddenButton.setOnClickListener(this);
     }
 
     @Override
@@ -49,6 +64,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View clickedView) {
+        Log.d("Scrum Poker", "clicked");
         int viewID = clickedView.getId();
 
         if(viewID == R.id.single_card_view_show){
