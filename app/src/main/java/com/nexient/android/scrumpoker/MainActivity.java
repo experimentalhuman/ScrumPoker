@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         singleCardShownButton = (Button) findViewById(R.id.single_card_view_show);
 
         // COMPLETED init Deck class/object
-        deck = new Deck(multiCardLayout, singleCardHiddenButton, singleCardShownButton);
+        deck = new Deck(multiCardLayout, singleCardHiddenButton, singleCardShownButton, this);
     }
 
     @Override
