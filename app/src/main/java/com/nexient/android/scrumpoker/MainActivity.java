@@ -1,5 +1,6 @@
 package com.nexient.android.scrumpoker;
 
+import android.graphics.Color;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -9,6 +10,8 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
+import android.widget.PopupMenu;
 
 import java.util.Set;
 
@@ -115,12 +118,85 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if(item.getItemId() == R.id.action_settings){
+        if(item.getItemId() == R.id.menuDefaultStyle){
+            FrameLayout fl = findViewById(R.id.main_frame_layout);
+            fl.setBackgroundResource(R.color.colorDefaultBG);
 
-            // TODO launch settings activity
+            Button b1 = (Button) findViewById(R.id.card_button_top_left);
+            b1.setBackgroundResource(R.color.colorDefaultButton);
+            b1.setTextColor(getResources().getColor(R.color.colorDefaultText));
+            Button b2 = (Button) findViewById(R.id.card_button_top_center);
+            b2.setBackgroundResource(R.color.colorDefaultButton);
+            b2.setTextColor(getResources().getColor(R.color.colorDefaultText));
+            Button b3 = (Button) findViewById(R.id.card_button_top_right);
+            b3.setBackgroundResource(R.color.colorDefaultButton);
+            b3.setTextColor(getResources().getColor(R.color.colorDefaultText));
+            Button b4 = (Button) findViewById(R.id.card_button_center_left);
+            b4.setBackgroundResource(R.color.colorDefaultButton);
+            b4.setTextColor(getResources().getColor(R.color.colorDefaultText));
+            Button b5 = (Button) findViewById(R.id.card_button_center_center);
+            b5.setBackgroundResource(R.color.colorDefaultButton);
+            b5.setTextColor(getResources().getColor(R.color.colorDefaultText));
+            Button b6 = (Button) findViewById(R.id.card_button_center_right);
+            b6.setBackgroundResource(R.color.colorDefaultButton);
+            b6.setTextColor(getResources().getColor(R.color.colorDefaultText));
+            Button b7 = (Button) findViewById(R.id.card_button_bottom_left);
+            b7.setBackgroundResource(R.color.colorDefaultButton);
+            b7.setTextColor(getResources().getColor(R.color.colorDefaultText));
+            Button b8 = (Button) findViewById(R.id.card_button_bottom_center);
+            b8.setBackgroundResource(R.color.colorDefaultButton);
+            b8.setTextColor(getResources().getColor(R.color.colorDefaultText));
+            Button b9 = (Button) findViewById(R.id.card_button_bottom_right);
+            b9.setBackgroundResource(R.color.colorDefaultButton);
+            b9.setTextColor(getResources().getColor(R.color.colorDefaultText));
+            Button b10 = (Button) findViewById(R.id.single_card_view_hide);
+            b10.setBackgroundResource(R.color.colorDefaultButton);
+            b10.setTextColor(getResources().getColor(R.color.colorDefaultText));
+            Button b11 = (Button) findViewById(R.id.single_card_view_show);
+            b11.setBackgroundResource(R.color.colorDefaultButton);
+            b11.setTextColor(getResources().getColor(R.color.colorDefaultText));
 
+        }else if (item.getItemId() == R.id.menuAlternateStyle){
+            FrameLayout fl = findViewById(R.id.main_frame_layout);
+            fl.setBackgroundResource(R.color.colorAlternateBG);
+
+            Button b1 = (Button) findViewById(R.id.card_button_top_left);
+            b1.setBackgroundResource(R.color.colorAlternateButton);
+            b1.setTextColor(getResources().getColor(R.color.colorAlternateText));
+            Button b2 = (Button) findViewById(R.id.card_button_top_center);
+            b2.setBackgroundResource(R.color.colorAlternateButton);
+            b2.setTextColor(getResources().getColor(R.color.colorAlternateText));
+            Button b3 = (Button) findViewById(R.id.card_button_top_right);
+            b3.setBackgroundResource(R.color.colorAlternateButton);
+            b3.setTextColor(getResources().getColor(R.color.colorAlternateText));
+            Button b4 = (Button) findViewById(R.id.card_button_center_left);
+            b4.setBackgroundResource(R.color.colorAlternateButton);
+            b4.setTextColor(getResources().getColor(R.color.colorAlternateText));
+            Button b5 = (Button) findViewById(R.id.card_button_center_center);
+            b5.setBackgroundResource(R.color.colorAlternateButton);
+            b5.setTextColor(getResources().getColor(R.color.colorAlternateText));
+            Button b6 = (Button) findViewById(R.id.card_button_center_right);
+            b6.setBackgroundResource(R.color.colorAlternateButton);
+            b6.setTextColor(getResources().getColor(R.color.colorAlternateText));
+            Button b7 = (Button) findViewById(R.id.card_button_bottom_left);
+            b7.setBackgroundResource(R.color.colorAlternateButton);
+            b7.setTextColor(getResources().getColor(R.color.colorAlternateText));
+            Button b8 = (Button) findViewById(R.id.card_button_bottom_center);
+            b8.setBackgroundResource(R.color.colorAlternateButton);
+            b8.setTextColor(getResources().getColor(R.color.colorAlternateText));
+            Button b9 = (Button) findViewById(R.id.card_button_bottom_right);
+            b9.setBackgroundResource(R.color.colorAlternateButton);
+            b9.setTextColor(getResources().getColor(R.color.colorAlternateText));
+            Button b10 = (Button) findViewById(R.id.single_card_view_hide);
+            b10.setBackgroundResource(R.color.colorAlternateButton);
+            b10.setTextColor(getResources().getColor(R.color.colorAlternateText));
+            Button b11 = (Button) findViewById(R.id.single_card_view_show);
+            b11.setBackgroundResource(R.color.colorAlternateButton);
+            b11.setTextColor(getResources().getColor(R.color.colorAlternateText));
         }
 
         return true;
     }
+
+
 }

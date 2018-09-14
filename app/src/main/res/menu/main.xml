@@ -6,5 +6,15 @@
         android:id="@+id/action_settings"
         android:title="Settings"
         android:orderInCategory="1"
-        app:showAsAction="ifRoom"/>
+        app:showAsAction="ifRoom">
+        <menu>
+            <item android:id="@+id/menuDefaultStyle"
+                android:title="Use Default Style"
+                />
+            <item android:id="@+id/menuAlternateStyle"
+                android:title="Use Alternate Style"
+                />
+
+        </menu>
+    </item>
 </menu>
