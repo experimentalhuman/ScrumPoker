@@ -116,83 +116,53 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
+    //method for switching colors between styles
+    private void changeColors(int txtID, int btnID, int bgID){
+        FrameLayout fl = findViewById(R.id.main_frame_layout);
+        fl.setBackgroundResource(bgID);
+
+        Button b1 = (Button) findViewById(R.id.card_button_top_left);
+        b1.setBackgroundResource(btnID);
+        b1.setTextColor(getResources().getColor(txtID));
+        Button b2 = (Button) findViewById(R.id.card_button_top_center);
+        b2.setBackgroundResource(btnID);
+        b2.setTextColor(getResources().getColor(txtID));
+        Button b3 = (Button) findViewById(R.id.card_button_top_right);
+        b3.setBackgroundResource(btnID);
+        b3.setTextColor(getResources().getColor(txtID));
+        Button b4 = (Button) findViewById(R.id.card_button_center_left);
+        b4.setBackgroundResource(btnID);
+        b4.setTextColor(getResources().getColor(txtID));
+        Button b5 = (Button) findViewById(R.id.card_button_center_center);
+        b5.setBackgroundResource(btnID);
+        b5.setTextColor(getResources().getColor(txtID));
+        Button b6 = (Button) findViewById(R.id.card_button_center_right);
+        b6.setBackgroundResource(btnID);
+        b6.setTextColor(getResources().getColor(txtID));
+        Button b7 = (Button) findViewById(R.id.card_button_bottom_left);
+        b7.setBackgroundResource(btnID);
+        b7.setTextColor(getResources().getColor(txtID));
+        Button b8 = (Button) findViewById(R.id.card_button_bottom_center);
+        b8.setBackgroundResource(btnID);
+        b8.setTextColor(getResources().getColor(txtID));
+        Button b9 = (Button) findViewById(R.id.card_button_bottom_right);
+        b9.setBackgroundResource(btnID);
+        b9.setTextColor(getResources().getColor(txtID));
+        Button b10 = (Button) findViewById(R.id.single_card_view_hide);
+        b10.setBackgroundResource(btnID);
+        b10.setTextColor(getResources().getColor(txtID));
+        Button b11 = (Button) findViewById(R.id.single_card_view_show);
+        b11.setBackgroundResource(btnID);
+        b11.setTextColor(getResources().getColor(txtID));
+    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if(item.getItemId() == R.id.menuDefaultStyle){
-            FrameLayout fl = findViewById(R.id.main_frame_layout);
-            fl.setBackgroundResource(R.color.colorDefaultBG);
-
-            Button b1 = (Button) findViewById(R.id.card_button_top_left);
-            b1.setBackgroundResource(R.color.colorDefaultButton);
-            b1.setTextColor(getResources().getColor(R.color.colorDefaultText));
-            Button b2 = (Button) findViewById(R.id.card_button_top_center);
-            b2.setBackgroundResource(R.color.colorDefaultButton);
-            b2.setTextColor(getResources().getColor(R.color.colorDefaultText));
-            Button b3 = (Button) findViewById(R.id.card_button_top_right);
-            b3.setBackgroundResource(R.color.colorDefaultButton);
-            b3.setTextColor(getResources().getColor(R.color.colorDefaultText));
-            Button b4 = (Button) findViewById(R.id.card_button_center_left);
-            b4.setBackgroundResource(R.color.colorDefaultButton);
-            b4.setTextColor(getResources().getColor(R.color.colorDefaultText));
-            Button b5 = (Button) findViewById(R.id.card_button_center_center);
-            b5.setBackgroundResource(R.color.colorDefaultButton);
-            b5.setTextColor(getResources().getColor(R.color.colorDefaultText));
-            Button b6 = (Button) findViewById(R.id.card_button_center_right);
-            b6.setBackgroundResource(R.color.colorDefaultButton);
-            b6.setTextColor(getResources().getColor(R.color.colorDefaultText));
-            Button b7 = (Button) findViewById(R.id.card_button_bottom_left);
-            b7.setBackgroundResource(R.color.colorDefaultButton);
-            b7.setTextColor(getResources().getColor(R.color.colorDefaultText));
-            Button b8 = (Button) findViewById(R.id.card_button_bottom_center);
-            b8.setBackgroundResource(R.color.colorDefaultButton);
-            b8.setTextColor(getResources().getColor(R.color.colorDefaultText));
-            Button b9 = (Button) findViewById(R.id.card_button_bottom_right);
-            b9.setBackgroundResource(R.color.colorDefaultButton);
-            b9.setTextColor(getResources().getColor(R.color.colorDefaultText));
-            Button b10 = (Button) findViewById(R.id.single_card_view_hide);
-            b10.setBackgroundResource(R.color.colorDefaultButton);
-            b10.setTextColor(getResources().getColor(R.color.colorDefaultText));
-            Button b11 = (Button) findViewById(R.id.single_card_view_show);
-            b11.setBackgroundResource(R.color.colorDefaultButton);
-            b11.setTextColor(getResources().getColor(R.color.colorDefaultText));
+            changeColors(R.color.colorDefaultText,R.color.colorDefaultButton,R.color.colorDefaultBG);
 
         }else if (item.getItemId() == R.id.menuAlternateStyle){
-            FrameLayout fl = findViewById(R.id.main_frame_layout);
-            fl.setBackgroundResource(R.color.colorAlternateBG);
-
-            Button b1 = (Button) findViewById(R.id.card_button_top_left);
-            b1.setBackgroundResource(R.color.colorAlternateButton);
-            b1.setTextColor(getResources().getColor(R.color.colorAlternateText));
-            Button b2 = (Button) findViewById(R.id.card_button_top_center);
-            b2.setBackgroundResource(R.color.colorAlternateButton);
-            b2.setTextColor(getResources().getColor(R.color.colorAlternateText));
-            Button b3 = (Button) findViewById(R.id.card_button_top_right);
-            b3.setBackgroundResource(R.color.colorAlternateButton);
-            b3.setTextColor(getResources().getColor(R.color.colorAlternateText));
-            Button b4 = (Button) findViewById(R.id.card_button_center_left);
-            b4.setBackgroundResource(R.color.colorAlternateButton);
-            b4.setTextColor(getResources().getColor(R.color.colorAlternateText));
-            Button b5 = (Button) findViewById(R.id.card_button_center_center);
-            b5.setBackgroundResource(R.color.colorAlternateButton);
-            b5.setTextColor(getResources().getColor(R.color.colorAlternateText));
-            Button b6 = (Button) findViewById(R.id.card_button_center_right);
-            b6.setBackgroundResource(R.color.colorAlternateButton);
-            b6.setTextColor(getResources().getColor(R.color.colorAlternateText));
-            Button b7 = (Button) findViewById(R.id.card_button_bottom_left);
-            b7.setBackgroundResource(R.color.colorAlternateButton);
-            b7.setTextColor(getResources().getColor(R.color.colorAlternateText));
-            Button b8 = (Button) findViewById(R.id.card_button_bottom_center);
-            b8.setBackgroundResource(R.color.colorAlternateButton);
-            b8.setTextColor(getResources().getColor(R.color.colorAlternateText));
-            Button b9 = (Button) findViewById(R.id.card_button_bottom_right);
-            b9.setBackgroundResource(R.color.colorAlternateButton);
-            b9.setTextColor(getResources().getColor(R.color.colorAlternateText));
-            Button b10 = (Button) findViewById(R.id.single_card_view_hide);
-            b10.setBackgroundResource(R.color.colorAlternateButton);
-            b10.setTextColor(getResources().getColor(R.color.colorAlternateText));
-            Button b11 = (Button) findViewById(R.id.single_card_view_show);
-            b11.setBackgroundResource(R.color.colorAlternateButton);
-            b11.setTextColor(getResources().getColor(R.color.colorAlternateText));
+            changeColors(R.color.colorAlternateText,R.color.colorAlternateButton,R.color.colorAlternateBG);
         }
 
         return true;
