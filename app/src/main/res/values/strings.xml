@@ -14,5 +14,5 @@
 
     <!--Default labels for single-card views-->
     <string name="card_label_single_shown">0</string>
-    <string name="card_label_single_hidden">X</string>
+    <string name="card_label_single_hidden">Tap to reveal</string>
 </resources>

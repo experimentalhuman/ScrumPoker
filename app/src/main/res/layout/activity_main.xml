@@ -6,141 +6,148 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
     <!--Layout for multi-card master view-->
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/multi_card_layout"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:visibility="visible" >
+        android:layout_height="match_parent"
+        android:fillViewport="true">
 
-        <Button
-            android:id="@+id/card_button_top_left"
-            android:text="@string/card_label_top_left"
-            android:textSize="@dimen/card_label_size_default"
-            android:layout_width="@dimen/card_width_default"
-            android:layout_height="@dimen/card_height_default"
-            android:layout_marginLeft="@dimen/card_margin_left_right"
-            android:layout_marginRight="@dimen/card_margin_left_right"
-            android:layout_marginTop="@dimen/card_margin_top_bottom"
-            android:layout_marginBottom="@dimen/card_margin_top_bottom"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/card_button_top_center" />
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/multi_card_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="visible" >
 
-        <Button
-            android:id="@+id/card_button_top_center"
-            android:text="@string/card_label_top_center"
-            android:textSize="@dimen/card_label_size_default"
-            android:layout_width="@dimen/card_width_default"
-            android:layout_height="@dimen/card_height_default"
-            android:layout_marginLeft="@dimen/card_margin_left_right"
-            android:layout_marginRight="@dimen/card_margin_left_right"
-            android:layout_marginTop="@dimen/card_margin_top_bottom"
-            android:layout_marginBottom="@dimen/card_margin_top_bottom"
-            app:layout_constraintStart_toEndOf="@id/card_button_top_left"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/card_button_top_right" />
+            <Button
+                android:id="@+id/card_button_top_left"
+                android:text="@string/card_label_top_left"
+                android:textSize="@dimen/card_label_size_default"
+                android:layout_width="@dimen/card_width_default"
+                android:layout_height="@dimen/card_height_default"
+                android:layout_marginLeft="@dimen/card_margin_left_right"
+                android:layout_marginRight="@dimen/card_margin_left_right"
+                android:layout_marginTop="@dimen/card_margin_top_bottom"
+                android:layout_marginBottom="@dimen/card_margin_top_bottom"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/card_button_top_center" />
 
-        <Button
-            android:id="@+id/card_button_top_right"
-            android:text="@string/card_label_top_right"
-            android:textSize="@dimen/card_label_size_default"
-            android:layout_width="@dimen/card_width_default"
-            android:layout_height="@dimen/card_height_default"
-            android:layout_marginLeft="@dimen/card_margin_left_right"
-            android:layout_marginRight="@dimen/card_margin_left_right"
-            android:layout_marginTop="@dimen/card_margin_top_bottom"
-            android:layout_marginBottom="@dimen/card_margin_top_bottom"
-            app:layout_constraintStart_toEndOf="@id/card_button_top_center"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            <Button
+                android:id="@+id/card_button_top_center"
+                android:text="@string/card_label_top_center"
+                android:textSize="@dimen/card_label_size_default"
+                android:layout_width="@dimen/card_width_default"
+                android:layout_height="@dimen/card_height_default"
+                android:layout_marginLeft="@dimen/card_margin_left_right"
+                android:layout_marginRight="@dimen/card_margin_left_right"
+                android:layout_marginTop="@dimen/card_margin_top_bottom"
+                android:layout_marginBottom="@dimen/card_margin_top_bottom"
+                app:layout_constraintStart_toEndOf="@id/card_button_top_left"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/card_button_top_right" />
 
-        <Button
-            android:id="@+id/card_button_center_left"
-            android:text="@string/card_label_center_left"
-            android:textSize="@dimen/card_label_size_default"
-            android:layout_width="@dimen/card_width_default"
-            android:layout_height="@dimen/card_height_default"
-            android:layout_marginLeft="@dimen/card_margin_left_right"
-            android:layout_marginRight="@dimen/card_margin_left_right"
-            android:layout_marginTop="@dimen/card_margin_top_bottom"
-            android:layout_marginBottom="@dimen/card_margin_top_bottom"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/card_button_top_left"
-            app:layout_constraintEnd_toStartOf="@+id/card_button_center_center" />
+            <Button
+                android:id="@+id/card_button_top_right"
+                android:text="@string/card_label_top_right"
+                android:textSize="@dimen/card_label_size_default"
+                android:layout_width="@dimen/card_width_default"
+                android:layout_height="@dimen/card_height_default"
+                android:layout_marginLeft="@dimen/card_margin_left_right"
+                android:layout_marginRight="@dimen/card_margin_left_right"
+                android:layout_marginTop="@dimen/card_margin_top_bottom"
+                android:layout_marginBottom="@dimen/card_margin_top_bottom"
+                app:layout_constraintStart_toEndOf="@id/card_button_top_center"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-        <Button
-            android:id="@+id/card_button_center_center"
-            android:text="@string/card_label_center_center"
-            android:textSize="@dimen/card_label_size_default"
-            android:layout_width="@dimen/card_width_default"
-            android:layout_height="@dimen/card_height_default"
-            android:layout_marginLeft="@dimen/card_margin_left_right"
-            android:layout_marginRight="@dimen/card_margin_left_right"
-            android:layout_marginTop="@dimen/card_margin_top_bottom"
-            android:layout_marginBottom="@dimen/card_margin_top_bottom"
-            app:layout_constraintStart_toEndOf="@id/card_button_center_left"
-            app:layout_constraintTop_toBottomOf="@id/card_button_top_center"
-            app:layout_constraintEnd_toStartOf="@+id/card_button_center_right" />
+            <Button
+                android:id="@+id/card_button_center_left"
+                android:text="@string/card_label_center_left"
+                android:textSize="@dimen/card_label_size_default"
+                android:layout_width="@dimen/card_width_default"
+                android:layout_height="@dimen/card_height_default"
+                android:layout_marginLeft="@dimen/card_margin_left_right"
+                android:layout_marginRight="@dimen/card_margin_left_right"
+                android:layout_marginTop="@dimen/card_margin_top_bottom"
+                android:layout_marginBottom="@dimen/card_margin_top_bottom"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_button_top_left"
+                app:layout_constraintEnd_toStartOf="@+id/card_button_center_center" />
 
-        <Button
-            android:id="@+id/card_button_center_right"
-            android:text="@string/card_label_center_right"
-            android:textSize="@dimen/card_label_size_default"
-            android:layout_width="@dimen/card_width_default"
-            android:layout_height="@dimen/card_height_default"
-            android:layout_marginLeft="@dimen/card_margin_left_right"
-            android:layout_marginRight="@dimen/card_margin_left_right"
-            android:layout_marginTop="@dimen/card_margin_top_bottom"
-            android:layout_marginBottom="@dimen/card_margin_top_bottom"
-            app:layout_constraintStart_toEndOf="@id/card_button_center_center"
-            app:layout_constraintTop_toBottomOf="@id/card_button_top_right"
-            app:layout_constraintEnd_toEndOf="parent" />
+            <Button
+                android:id="@+id/card_button_center_center"
+                android:text="@string/card_label_center_center"
+                android:textSize="@dimen/card_label_size_default"
+                android:layout_width="@dimen/card_width_default"
+                android:layout_height="@dimen/card_height_default"
+                android:layout_marginLeft="@dimen/card_margin_left_right"
+                android:layout_marginRight="@dimen/card_margin_left_right"
+                android:layout_marginTop="@dimen/card_margin_top_bottom"
+                android:layout_marginBottom="@dimen/card_margin_top_bottom"
+                app:layout_constraintStart_toEndOf="@id/card_button_center_left"
+                app:layout_constraintTop_toBottomOf="@id/card_button_top_center"
+                app:layout_constraintEnd_toStartOf="@+id/card_button_center_right" />
 
-        <Button
-            android:id="@+id/card_button_bottom_left"
-            android:text="@string/card_label_bottom_left"
-            android:textSize="@dimen/card_label_size_default"
-            android:layout_width="@dimen/card_width_default"
-            android:layout_height="@dimen/card_height_default"
-            android:layout_marginLeft="@dimen/card_margin_left_right"
-            android:layout_marginRight="@dimen/card_margin_left_right"
-            android:layout_marginTop="@dimen/card_margin_top_bottom"
-            android:layout_marginBottom="@dimen/card_margin_top_bottom"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/card_button_center_left"
-            app:layout_constraintEnd_toStartOf="@+id/card_button_bottom_center" />
+            <Button
+                android:id="@+id/card_button_center_right"
+                android:text="@string/card_label_center_right"
+                android:textSize="@dimen/card_label_size_default"
+                android:layout_width="@dimen/card_width_default"
+                android:layout_height="@dimen/card_height_default"
+                android:layout_marginLeft="@dimen/card_margin_left_right"
+                android:layout_marginRight="@dimen/card_margin_left_right"
+                android:layout_marginTop="@dimen/card_margin_top_bottom"
+                android:layout_marginBottom="@dimen/card_margin_top_bottom"
+                app:layout_constraintStart_toEndOf="@id/card_button_center_center"
+                app:layout_constraintTop_toBottomOf="@id/card_button_top_right"
+                app:layout_constraintEnd_toEndOf="parent" />
 
-        <Button
-            android:id="@+id/card_button_bottom_center"
-            android:text="@string/card_label_bottom_center"
-            android:textSize="@dimen/card_label_size_default"
-            android:layout_width="@dimen/card_width_default"
-            android:layout_height="@dimen/card_height_default"
-            android:layout_marginLeft="@dimen/card_margin_left_right"
-            android:layout_marginRight="@dimen/card_margin_left_right"
-            android:layout_marginTop="@dimen/card_margin_top_bottom"
-            android:layout_marginBottom="@dimen/card_margin_top_bottom"
-            app:layout_constraintStart_toEndOf="@id/card_button_bottom_left"
-            app:layout_constraintTop_toBottomOf="@id/card_button_center_center"
-            app:layout_constraintEnd_toStartOf="@+id/card_button_bottom_right" />
+            <Button
+                android:id="@+id/card_button_bottom_left"
+                android:text="@string/card_label_bottom_left"
+                android:textSize="@dimen/card_label_size_default"
+                android:layout_width="@dimen/card_width_default"
+                android:layout_height="@dimen/card_height_default"
+                android:layout_marginLeft="@dimen/card_margin_left_right"
+                android:layout_marginRight="@dimen/card_margin_left_right"
+                android:layout_marginTop="@dimen/card_margin_top_bottom"
+                android:layout_marginBottom="@dimen/card_margin_top_bottom"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_button_center_left"
+                app:layout_constraintEnd_toStartOf="@+id/card_button_bottom_center" />
 
-        <Button
-            android:id="@+id/card_button_bottom_right"
-            android:text="@string/card_label_bottom_right"
-            android:textSize="@dimen/card_label_size_default"
-            android:layout_width="@dimen/card_width_default"
-            android:layout_height="@dimen/card_height_default"
-            android:layout_marginLeft="@dimen/card_margin_left_right"
-            android:layout_marginRight="@dimen/card_margin_left_right"
-            android:layout_marginTop="@dimen/card_margin_top_bottom"
-            android:layout_marginBottom="@dimen/card_margin_top_bottom"
-            app:layout_constraintStart_toEndOf="@id/card_button_bottom_center"
-            app:layout_constraintTop_toBottomOf="@id/card_button_center_right"
-            app:layout_constraintEnd_toEndOf="parent" />
+            <Button
+                android:id="@+id/card_button_bottom_center"
+                android:text="@string/card_label_bottom_center"
+                android:textSize="@dimen/card_label_size_default"
+                android:layout_width="@dimen/card_width_default"
+                android:layout_height="@dimen/card_height_default"
+                android:layout_marginLeft="@dimen/card_margin_left_right"
+                android:layout_marginRight="@dimen/card_margin_left_right"
+                android:layout_marginTop="@dimen/card_margin_top_bottom"
+                android:layout_marginBottom="@dimen/card_margin_top_bottom"
+                app:layout_constraintStart_toEndOf="@id/card_button_bottom_left"
+                app:layout_constraintTop_toBottomOf="@id/card_button_center_center"
+                app:layout_constraintEnd_toStartOf="@+id/card_button_bottom_right" />
 
-    </android.support.constraint.ConstraintLayout>
+            <Button
+                android:id="@+id/card_button_bottom_right"
+                android:text="@string/card_label_bottom_right"
+                android:textSize="@dimen/card_label_size_default"
+                android:layout_width="@dimen/card_width_default"
+                android:layout_height="@dimen/card_height_default"
+                android:layout_marginLeft="@dimen/card_margin_left_right"
+                android:layout_marginRight="@dimen/card_margin_left_right"
+                android:layout_marginTop="@dimen/card_margin_top_bottom"
+                android:layout_marginBottom="@dimen/card_margin_top_bottom"
+                app:layout_constraintStart_toEndOf="@id/card_button_bottom_center"
+                app:layout_constraintTop_toBottomOf="@id/card_button_center_right"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
 
     <Button
         android:id="@+id/single_card_view_show"
@@ -155,6 +162,7 @@
         android:layout_width="@dimen/card_width_single"
         android:layout_height="@dimen/card_height_single"
         android:layout_gravity="center"
-        android:textSize="@dimen/card_label_size_single"
+        android:text="@string/card_label_single_hidden"
+        android:textSize="@dimen/card_hint_size_single"
         android:visibility="invisible"/>
 </FrameLayout>
