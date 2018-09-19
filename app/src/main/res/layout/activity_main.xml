@@ -2,10 +2,11 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_frame_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorDefaultBG"
     tools:context=".MainActivity">
-
 
     <!--Layout for multi-card master view-->
     <ScrollView
@@ -20,137 +21,157 @@
             android:layout_gravity="center"
             android:visibility="visible" >
 
-            <Button
-                android:id="@+id/card_button_top_left"
-                android:text="@string/card_label_top_left"
-                android:textSize="@dimen/card_label_size_default"
-                android:layout_width="@dimen/card_width_default"
-                android:layout_height="@dimen/card_height_default"
-                android:layout_marginLeft="@dimen/card_margin_left_right"
-                android:layout_marginRight="@dimen/card_margin_left_right"
-                android:layout_marginTop="@dimen/card_margin_top_bottom"
-                android:layout_marginBottom="@dimen/card_margin_top_bottom"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/card_button_top_center" />
+        <Button
+            android:id="@+id/card_button_top_left"
+            android:textColor="@color/colorDefaultText"
+            android:background="@color/colorDefaultButton"
+            android:text="@string/card_label_top_left"
+            android:textSize="@dimen/card_label_size_default"
+            android:layout_width="@dimen/card_width_default"
+            android:layout_height="@dimen/card_height_default"
+            android:layout_marginLeft="@dimen/card_margin_left_right"
+            android:layout_marginRight="@dimen/card_margin_left_right"
+            android:layout_marginTop="@dimen/card_margin_top_bottom"
+            android:layout_marginBottom="@dimen/card_margin_top_bottom"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/card_button_top_center" />
 
-            <Button
-                android:id="@+id/card_button_top_center"
-                android:text="@string/card_label_top_center"
-                android:textSize="@dimen/card_label_size_default"
-                android:layout_width="@dimen/card_width_default"
-                android:layout_height="@dimen/card_height_default"
-                android:layout_marginLeft="@dimen/card_margin_left_right"
-                android:layout_marginRight="@dimen/card_margin_left_right"
-                android:layout_marginTop="@dimen/card_margin_top_bottom"
-                android:layout_marginBottom="@dimen/card_margin_top_bottom"
-                app:layout_constraintStart_toEndOf="@id/card_button_top_left"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/card_button_top_right" />
+        <Button
+            android:id="@+id/card_button_top_center"
+            android:textColor="@color/colorDefaultText"
+            android:background="@color/colorDefaultButton"
+            android:text="@string/card_label_top_center"
+            android:textSize="@dimen/card_label_size_default"
+            android:layout_width="@dimen/card_width_default"
+            android:layout_height="@dimen/card_height_default"
+            android:layout_marginLeft="@dimen/card_margin_left_right"
+            android:layout_marginRight="@dimen/card_margin_left_right"
+            android:layout_marginTop="@dimen/card_margin_top_bottom"
+            android:layout_marginBottom="@dimen/card_margin_top_bottom"
+            app:layout_constraintStart_toEndOf="@id/card_button_top_left"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/card_button_top_right" />
 
-            <Button
-                android:id="@+id/card_button_top_right"
-                android:text="@string/card_label_top_right"
-                android:textSize="@dimen/card_label_size_default"
-                android:layout_width="@dimen/card_width_default"
-                android:layout_height="@dimen/card_height_default"
-                android:layout_marginLeft="@dimen/card_margin_left_right"
-                android:layout_marginRight="@dimen/card_margin_left_right"
-                android:layout_marginTop="@dimen/card_margin_top_bottom"
-                android:layout_marginBottom="@dimen/card_margin_top_bottom"
-                app:layout_constraintStart_toEndOf="@id/card_button_top_center"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toEndOf="parent" />
+        <Button
+            android:id="@+id/card_button_top_right"
+            android:textColor="@color/colorDefaultText"
+            android:background="@color/colorDefaultButton"
+            android:text="@string/card_label_top_right"
+            android:textSize="@dimen/card_label_size_default"
+            android:layout_width="@dimen/card_width_default"
+            android:layout_height="@dimen/card_height_default"
+            android:layout_marginLeft="@dimen/card_margin_left_right"
+            android:layout_marginRight="@dimen/card_margin_left_right"
+            android:layout_marginTop="@dimen/card_margin_top_bottom"
+            android:layout_marginBottom="@dimen/card_margin_top_bottom"
+            app:layout_constraintStart_toEndOf="@id/card_button_top_center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-            <Button
-                android:id="@+id/card_button_center_left"
-                android:text="@string/card_label_center_left"
-                android:textSize="@dimen/card_label_size_default"
-                android:layout_width="@dimen/card_width_default"
-                android:layout_height="@dimen/card_height_default"
-                android:layout_marginLeft="@dimen/card_margin_left_right"
-                android:layout_marginRight="@dimen/card_margin_left_right"
-                android:layout_marginTop="@dimen/card_margin_top_bottom"
-                android:layout_marginBottom="@dimen/card_margin_top_bottom"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/card_button_top_left"
-                app:layout_constraintEnd_toStartOf="@+id/card_button_center_center" />
+        <Button
+            android:id="@+id/card_button_center_left"
+            android:textColor="@color/colorDefaultText"
+            android:background="@color/colorDefaultButton"
+            android:text="@string/card_label_center_left"
+            android:textSize="@dimen/card_label_size_default"
+            android:layout_width="@dimen/card_width_default"
+            android:layout_height="@dimen/card_height_default"
+            android:layout_marginLeft="@dimen/card_margin_left_right"
+            android:layout_marginRight="@dimen/card_margin_left_right"
+            android:layout_marginTop="@dimen/card_margin_top_bottom"
+            android:layout_marginBottom="@dimen/card_margin_top_bottom"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_button_top_left"
+            app:layout_constraintEnd_toStartOf="@+id/card_button_center_center" />
 
-            <Button
-                android:id="@+id/card_button_center_center"
-                android:text="@string/card_label_center_center"
-                android:textSize="@dimen/card_label_size_default"
-                android:layout_width="@dimen/card_width_default"
-                android:layout_height="@dimen/card_height_default"
-                android:layout_marginLeft="@dimen/card_margin_left_right"
-                android:layout_marginRight="@dimen/card_margin_left_right"
-                android:layout_marginTop="@dimen/card_margin_top_bottom"
-                android:layout_marginBottom="@dimen/card_margin_top_bottom"
-                app:layout_constraintStart_toEndOf="@id/card_button_center_left"
-                app:layout_constraintTop_toBottomOf="@id/card_button_top_center"
-                app:layout_constraintEnd_toStartOf="@+id/card_button_center_right" />
+        <Button
+            android:id="@+id/card_button_center_center"
+            android:textColor="@color/colorDefaultText"
+            android:background="@color/colorDefaultButton"
+            android:text="@string/card_label_center_center"
+            android:textSize="@dimen/card_label_size_default"
+            android:layout_width="@dimen/card_width_default"
+            android:layout_height="@dimen/card_height_default"
+            android:layout_marginLeft="@dimen/card_margin_left_right"
+            android:layout_marginRight="@dimen/card_margin_left_right"
+            android:layout_marginTop="@dimen/card_margin_top_bottom"
+            android:layout_marginBottom="@dimen/card_margin_top_bottom"
+            app:layout_constraintStart_toEndOf="@id/card_button_center_left"
+            app:layout_constraintTop_toBottomOf="@id/card_button_top_center"
+            app:layout_constraintEnd_toStartOf="@+id/card_button_center_right" />
 
-            <Button
-                android:id="@+id/card_button_center_right"
-                android:text="@string/card_label_center_right"
-                android:textSize="@dimen/card_label_size_default"
-                android:layout_width="@dimen/card_width_default"
-                android:layout_height="@dimen/card_height_default"
-                android:layout_marginLeft="@dimen/card_margin_left_right"
-                android:layout_marginRight="@dimen/card_margin_left_right"
-                android:layout_marginTop="@dimen/card_margin_top_bottom"
-                android:layout_marginBottom="@dimen/card_margin_top_bottom"
-                app:layout_constraintStart_toEndOf="@id/card_button_center_center"
-                app:layout_constraintTop_toBottomOf="@id/card_button_top_right"
-                app:layout_constraintEnd_toEndOf="parent" />
+        <Button
+            android:id="@+id/card_button_center_right"
+            android:textColor="@color/colorDefaultText"
+            android:background="@color/colorDefaultButton"
+            android:text="@string/card_label_center_right"
+            android:textSize="@dimen/card_label_size_default"
+            android:layout_width="@dimen/card_width_default"
+            android:layout_height="@dimen/card_height_default"
+            android:layout_marginLeft="@dimen/card_margin_left_right"
+            android:layout_marginRight="@dimen/card_margin_left_right"
+            android:layout_marginTop="@dimen/card_margin_top_bottom"
+            android:layout_marginBottom="@dimen/card_margin_top_bottom"
+            app:layout_constraintStart_toEndOf="@id/card_button_center_center"
+            app:layout_constraintTop_toBottomOf="@id/card_button_top_right"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-            <Button
-                android:id="@+id/card_button_bottom_left"
-                android:text="@string/card_label_bottom_left"
-                android:textSize="@dimen/card_label_size_default"
-                android:layout_width="@dimen/card_width_default"
-                android:layout_height="@dimen/card_height_default"
-                android:layout_marginLeft="@dimen/card_margin_left_right"
-                android:layout_marginRight="@dimen/card_margin_left_right"
-                android:layout_marginTop="@dimen/card_margin_top_bottom"
-                android:layout_marginBottom="@dimen/card_margin_top_bottom"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/card_button_center_left"
-                app:layout_constraintEnd_toStartOf="@+id/card_button_bottom_center" />
+        <Button
+            android:id="@+id/card_button_bottom_left"
+            android:textColor="@color/colorDefaultText"
+            android:background="@color/colorDefaultButton"
+            android:text="@string/card_label_bottom_left"
+            android:textSize="@dimen/card_label_size_default"
+            android:layout_width="@dimen/card_width_default"
+            android:layout_height="@dimen/card_height_default"
+            android:layout_marginLeft="@dimen/card_margin_left_right"
+            android:layout_marginRight="@dimen/card_margin_left_right"
+            android:layout_marginTop="@dimen/card_margin_top_bottom"
+            android:layout_marginBottom="@dimen/card_margin_top_bottom"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_button_center_left"
+            app:layout_constraintEnd_toStartOf="@+id/card_button_bottom_center" />
 
-            <Button
-                android:id="@+id/card_button_bottom_center"
-                android:text="@string/card_label_bottom_center"
-                android:textSize="@dimen/card_label_size_default"
-                android:layout_width="@dimen/card_width_default"
-                android:layout_height="@dimen/card_height_default"
-                android:layout_marginLeft="@dimen/card_margin_left_right"
-                android:layout_marginRight="@dimen/card_margin_left_right"
-                android:layout_marginTop="@dimen/card_margin_top_bottom"
-                android:layout_marginBottom="@dimen/card_margin_top_bottom"
-                app:layout_constraintStart_toEndOf="@id/card_button_bottom_left"
-                app:layout_constraintTop_toBottomOf="@id/card_button_center_center"
-                app:layout_constraintEnd_toStartOf="@+id/card_button_bottom_right" />
+        <Button
+            android:id="@+id/card_button_bottom_center"
+            android:textColor="@color/colorDefaultText"
+            android:background="@color/colorDefaultButton"
+            android:text="@string/card_label_bottom_center"
+            android:textSize="@dimen/card_label_size_default"
+            android:layout_width="@dimen/card_width_default"
+            android:layout_height="@dimen/card_height_default"
+            android:layout_marginLeft="@dimen/card_margin_left_right"
+            android:layout_marginRight="@dimen/card_margin_left_right"
+            android:layout_marginTop="@dimen/card_margin_top_bottom"
+            android:layout_marginBottom="@dimen/card_margin_top_bottom"
+            app:layout_constraintStart_toEndOf="@id/card_button_bottom_left"
+            app:layout_constraintTop_toBottomOf="@id/card_button_center_center"
+            app:layout_constraintEnd_toStartOf="@+id/card_button_bottom_right" />
 
-            <Button
-                android:id="@+id/card_button_bottom_right"
-                android:text="@string/card_label_bottom_right"
-                android:textSize="@dimen/card_label_size_default"
-                android:layout_width="@dimen/card_width_default"
-                android:layout_height="@dimen/card_height_default"
-                android:layout_marginLeft="@dimen/card_margin_left_right"
-                android:layout_marginRight="@dimen/card_margin_left_right"
-                android:layout_marginTop="@dimen/card_margin_top_bottom"
-                android:layout_marginBottom="@dimen/card_margin_top_bottom"
-                app:layout_constraintStart_toEndOf="@id/card_button_bottom_center"
-                app:layout_constraintTop_toBottomOf="@id/card_button_center_right"
-                app:layout_constraintEnd_toEndOf="parent" />
+        <Button
+            android:id="@+id/card_button_bottom_right"
+            android:textColor="@color/colorDefaultText"
+            android:background="@color/colorDefaultButton"
+            android:text="@string/card_label_bottom_right"
+            android:textSize="@dimen/card_label_size_default"
+            android:layout_width="@dimen/card_width_default"
+            android:layout_height="@dimen/card_height_default"
+            android:layout_marginLeft="@dimen/card_margin_left_right"
+            android:layout_marginRight="@dimen/card_margin_left_right"
+            android:layout_marginTop="@dimen/card_margin_top_bottom"
+            android:layout_marginBottom="@dimen/card_margin_top_bottom"
+            app:layout_constraintStart_toEndOf="@id/card_button_bottom_center"
+            app:layout_constraintTop_toBottomOf="@id/card_button_center_right"
+            app:layout_constraintEnd_toEndOf="parent" />
 
         </android.support.constraint.ConstraintLayout>
     </ScrollView>
 
     <Button
         android:id="@+id/single_card_view_show"
+        android:textColor="@color/colorDefaultText"
+        android:background="@color/colorDefaultButton"
         android:layout_width="@dimen/card_width_single"
         android:layout_height="@dimen/card_height_single"
         android:layout_gravity="center"
@@ -159,6 +180,8 @@
 
     <Button
         android:id="@+id/single_card_view_hide"
+        android:textColor="@color/colorDefaultText"
+        android:background="@color/colorDefaultButton"
         android:layout_width="@dimen/card_width_single"
         android:layout_height="@dimen/card_height_single"
         android:layout_gravity="center"
